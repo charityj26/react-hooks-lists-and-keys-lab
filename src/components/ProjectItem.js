@@ -10,8 +10,11 @@ function ProjectItem({ name, about, technologies }) {
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
+        {technologies.map((tech,index)=>
+        <span
+         key={index}>{tech}
+        </span>)}
         {/* render a <span> for each technology in the technologies array */}
-        {newTech}
       </div>
     </div>
   );
